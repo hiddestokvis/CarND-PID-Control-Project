@@ -25,3 +25,7 @@ I started off with all hyper parameters set to 0.1 and I used twiddle to train t
 From here I started to increase the number of steps included in a twiddle optimalisation round. Also I set the integral parameter to 0 as the simulator has no bias and I adjusted the twiddle optimalisation to tune just the two (P&D) other parameters. Tuning up to just past the first corner showed me I needed to increase the D parameter further.
 
 Finally I increased the number of steps to include a full circle around the lap and optimized until I was reasonably confident with my results.
+
+# Twiddle
+
+After tuning the parameters with Twiddle the car succesfully drove around the track, however when Twiddle was turned off there was strain on the cpu and the steering commands where fired quicker resulting in the car crashing with exactly the same parameters. I upped the differential parameter from 2.7 to 3.5 which solved the problem.
